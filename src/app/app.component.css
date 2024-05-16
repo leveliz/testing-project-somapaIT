@@ -65,6 +65,11 @@
   width: 7rem;
 }
 
+.btn {
+  background-color: transparent;
+  margin-left: 8px;
+  font-size: 50px;
+}
 .content-between {
   display: flex;
   justify-content: flex-start;
@@ -90,11 +95,11 @@ mat-form-field {
 }
 
 .mat-form-field-flex {
-  border: 1px solid #ccc; /* Border color can be changed as needed */
+  border: 1px solid #ccc;
 }
 
 .mat-form-field-label {
-  color: rgba(0, 0, 0, 0.6); /* Darker label color */
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .mat-form-field-infix {
@@ -109,6 +114,32 @@ mat-form-field {
   border-left: 1px solid #e0e0e0;
 }
 
+.mat-row:nth-child(odd) {
+  background-color: #ffffff !important;
+}
+
 .mat-row:nth-child(even) {
-  background-color: #f0f4ff; /* สีพื้นหลังสำหรับแถวคู่ */
+  background-color: #f0f4ff !important;
+}
+
+.mat-cell {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mat-mdc-button > .mat-icon {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-size: 25px !important;
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.title {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
