@@ -53,8 +53,8 @@
       </div>
 
       <div class="content-center">
-        <button class="btn-w" color="primary" type="submit" matTooltip="Add" mat-flat-button>{{ isEditing ? 'Edit' :
-          'Add' }}</button>
+        <button class="btn-w" color="primary" type="submit" matTooltip="{{ isEditing ? 'Edit' : 'Add' }}"
+          mat-flat-button>{{ isEditing ? 'Edit' : 'Add' }}</button>
         <button class="btn-w" type="button" matTooltip="Cancel" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);"
           mat-stroked-button (click)="cancel()">Cancel</button>
       </div>
@@ -67,7 +67,7 @@
       <!-- ID Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef class="text-align bd-left"
-          style="width: 40px; background-color: #8DA8D8; "> No.
+          style="width: 40px; background-color: #8DA8D8; color: white;"> No.
         </th>
         <td mat-cell *matCellDef="let element" class="text-align bd-left"> {{element.id}} </td>
       </ng-container>
@@ -83,19 +83,22 @@
 
       <!-- Firstname Column -->
       <ng-container matColumnDef="firstName">
-        <th mat-header-cell *matHeaderCellDef class="bd-left" style="background-color: #8DA8D8;"> First Name </th>
+        <th mat-header-cell *matHeaderCellDef class="bd-left" style="background-color: #8DA8D8; color: white;"> First
+          Name </th>
         <td mat-cell *matCellDef="let element" class="bd-left"> {{element.firstName}} </td>
       </ng-container>
 
       <!-- Lastname Column -->
       <ng-container matColumnDef="lastName">
-        <th mat-header-cell *matHeaderCellDef class="bd-left" style="background-color: #8DA8D8;"> Last Name </th>
+        <th mat-header-cell *matHeaderCellDef class="bd-left" style="background-color: #8DA8D8; color: white;"> Last
+          Name </th>
         <td mat-cell *matCellDef="let element" class="bd-left"> {{element.lastName}} </td>
       </ng-container>
 
       <!-- Gender Column -->
       <ng-container matColumnDef="gender">
-        <th mat-header-cell *matHeaderCellDef class="text-align bd-left" style="background-color: #8DA8D8;"> Gender
+        <th mat-header-cell *matHeaderCellDef class="text-align bd-left"
+          style="background-color: #8DA8D8; color: white;"> Gender
         </th>
         <td mat-cell *matCellDef="let element" class="text-align bd-left"
           [matTooltip]="getFullGenderName(element.gender)">
@@ -104,13 +107,13 @@
 
       <!-- Score Column -->
       <ng-container matColumnDef="score">
-        <th mat-header-cell *matHeaderCellDef class="text-align bd-left" style="background-color: #8DA8D8;"> Score </th>
+        <th mat-header-cell *matHeaderCellDef class="text-align bd-left"
+          style="background-color: #8DA8D8; color: white;"> Score </th>
         <td mat-cell *matCellDef="let element" class="text-align bd-left"> {{element.score | number:'1.2-2'}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-        [ngStyle]="{'background-color': row % 2 === 0 ? 'blue' : ''}"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </section>
 </section>
